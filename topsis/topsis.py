@@ -64,15 +64,14 @@ def topsis(input_file, weights, impacts, output_file):
     print("TOPSIS analysis completed successfully")
 
 
-if __name__ == "__main__":
-
+def main():
+    import sys
     if len(sys.argv) != 5:
         print("Usage: python topsis.py <InputDataFile> <Weights> <Impacts> <ResultFileName>")
         sys.exit(1)
 
-    topsis(
-        sys.argv[1],  # InputDataFile
-        sys.argv[2],  # Weights
-        sys.argv[3],  # Impacts
-        sys.argv[4]   # ResultFileName
-    )
+    topsis(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+
+
+if __name__ == "__main__":
+    main()
