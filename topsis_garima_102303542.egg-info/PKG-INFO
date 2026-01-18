@@ -1,3 +1,23 @@
+Metadata-Version: 2.4
+Name: topsis_garima_102303542
+Version: 0.0.1
+Summary: TOPSIS implementation in Python (Command Line Tool)
+Author: Garima Singla
+Author-email: garimasingla732@gmail.com
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
 # TOPSIS Implementation in Python
 
 This project provides a **command-line implementation of the TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)** method using Python.  
@@ -16,7 +36,6 @@ The best alternative:
 --------------------------------
 
 # Project Structure
-```
 102303542_TOPSIS/
 │
 ├── topsis/
@@ -44,8 +63,7 @@ The best alternative:
 │ # TOPSIS score graph
 │
 └── topsis_ranking.png
-# Ranking graph
-```
+| # Ranking graph
 -----------------------------------
 
 # Requirements
