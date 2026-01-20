@@ -1,7 +1,12 @@
 # TOPSIS Implementation in Python
 
-This project provides a **command-line implementation of the TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)** method using Python.  
-It allows ranking of alternatives based on multiple criteria, weights, and impacts.
+This project implements the **TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)** method in Python and provides:
+
+-  A **command-line interface (CLI)**
+-  A **web service using Flask**
+-  A **colorful frontend (HTML + CSS)**
+-  **Email-based delivery** of results
+-  Packaging and distribution via **PyPI**
 
 --------------------------------
 
@@ -22,15 +27,27 @@ The best alternative:
 ├── topsis/
 │ ├── init.py
 │ └── topsis.py
-│ # Main TOPSIS implementation (CLI)
+│ # Main TOPSIS implementation (CLI & logic)
+│
+├── app.py
+│ # Flask backend for web service
+│
+├── email_utils.py
+│ # Email sending utility (SMTP)
+│
+├── templates/
+│ ├── index.html
+│ └── success.html
+│ # Success page after email delivery
+│
+├── uploads/
+│ # Uploaded CSV files
+│
+├── results/
+│ # Generated TOPSIS result files
 │
 ├── plot_graphs.py
-│ # Script to generate graphs
-│
-├── README.md
-│ # Project documentation
-│
-├── .gitignore
+│ # Script to generate TOPSIS graphs
 │
 ├── Topsis-Dataset.csv
 │ # Sample input dataset
@@ -38,13 +55,20 @@ The best alternative:
 ├── text_classification_result.csv
 │ # Example TOPSIS output
 │
-├── modelResults.csv
-│
 ├── topsis_scores.png
 │ # TOPSIS score graph
 │
-└── topsis_ranking.png
-# Ranking graph
+├── topsis_ranking.png
+│ # Ranking graph
+│
+├── screenshots/
+│   ├── homepage.png
+│   └── success.png
+│
+├── README.md
+├── setup.py
+├── pyproject.toml
+└── LICENSE
 ```
 -----------------------------------
 
@@ -53,16 +77,38 @@ The best alternative:
 - Python 3.x
 - numpy
 - pandas
+- flask
 - matplotlib(for graphs)
 
 Install dependencies using:
-pip install numpy pandas matplotlib
+pip install numpy pandas matplotlib flask
 
 -------------------------------------
 
 # Usage(Command Line)
 python topsis.py <InputDataFile> <Weights> <Impacts> <ResultFileName>
 
+# Web Service for TOPSIS
+A Flask-based web service was developed to provide a user-friendly interface for the TOPSIS algorithm.
+Features:
+Upload input CSV file
+Enter weights and impacts (comma-separated)
+Enter email ID
+Receive TOPSIS result via email
+Input validation for:
+   Weights and impacts count
+   Valid impact symbols (+ or -)
+   Email format
+
+##  Web Interface Screenshots
+
+### Homepage – Input Form
+![TOPSIS Web Interface](screenshots/homepage.png)
+
+### Success Page
+![TOPSIS Success Page](screenshots/success.png)
+
+## Graphical Analysis
 Generate graphs using: 
 python plot_graphs.py
 

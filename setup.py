@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="topsis_garima_102303542",
-    version="0.0.1",
+    version="0.0.2",
     author="Garima Singla",
     author_email="garimasingla732@gmail.com",
     description="TOPSIS implementation in Python (Command Line Tool)",

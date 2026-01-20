@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: topsis_garima_102303542
-Version: 0.0.1
+Version: 0.0.2
 Summary: TOPSIS implementation in Python (Command Line Tool)
 Author: Garima Singla
 Author-email: garimasingla732@gmail.com
@@ -36,6 +36,7 @@ The best alternative:
 --------------------------------
 
 # Project Structure
+```
 102303542_TOPSIS/
 │
 ├── topsis/
@@ -63,7 +64,8 @@ The best alternative:
 │ # TOPSIS score graph
 │
 └── topsis_ranking.png
-| # Ranking graph
+# Ranking graph
+```
 -----------------------------------
 
 # Requirements
